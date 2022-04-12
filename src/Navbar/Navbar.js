@@ -1,15 +1,12 @@
 import React from 'react';
-import NavbarClient from './NavbarClient';
-import NavbarGuest from './NavbarGuest';
-import NavbarRedacteur from './NavbarRedacteur';
+import NavbarClient from './NavbarUser';
+import NavbarConnecte from './NavbarConnecte';
 
 function Navbar () {
     return ( localStorage.getItem('ClientInfo') ?
-    <NavbarClient/>
-    : localStorage.getItem('RedacteurInfo') ?
-        <NavbarRedacteur />
-        :
-        <NavbarGuest /> );
+    <NavbarClient/> :
+
+         <NavbarConnecte /> );
 }
 
 export default Navbar ;
